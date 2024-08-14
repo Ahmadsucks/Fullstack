@@ -3,6 +3,7 @@ import { useState } from 'react'
 const Button = ({ onClick, text }) => <button onClick={onClick}>{text}</button>
 
 const Statistics = ({ good, neutral, bad, all, average, positive}) => {
+  if (all === 0) return (<p>No feedback given</p>)
  return (
   <>
   <h1>statistics</h1>
